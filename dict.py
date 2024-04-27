@@ -1,27 +1,18 @@
-# python code to implement the above approach
+# Program to sort alphabetically the words form a string provided by the user
 
-# Function to print the words
-def printWord(str, s):
-	for i in range(0, len(str)):
-		if (not (str[i] in s)):
-			return
+my_str = "Hello this Is an Example With cased letters"
 
-	print(str)
+# To take input from the user
+#my_str = input("Enter a string: ")
 
-# Function to find the words
-def findWord(str1, str2):
-	s = ""
-	for i in str2:
-		s += i
+# breakdown the string into a list of words
+words = [word.lower() for word in my_str.split()]
 
-	for i in range(0, len(str1)):
-		printWord(str1[i], s)
+# sort the list
+words.sort()
 
+# display the sorted words
 
-str1 = ["go", "bat", "me", "eat", "goal", "boy", "run"]
-
-str2 = ["e", "o", "b", "a", "m", "g", "l"]
-
-findWord(str1, str2)
-
-
+print("The sorted words are:")
+for word in words:
+   print(word)
